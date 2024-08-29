@@ -1,5 +1,5 @@
 {
-    "name": "backpack/language-switcher",
+    "name": "hncore/language-switcher",
     "description": "Language Switcher for Backpack",
     "license": "MIT",
     "authors": [
@@ -22,7 +22,7 @@
         "analyse": "./vendor/bin/phpstan analyse --level 5 src"
     },
     "require": {
-        "backpack/crud": "^6.0",
+        "hncore/crud": "^6.7.34",
         "outhebox/blade-flags": "^1.2"
     },
     "require-dev": {
