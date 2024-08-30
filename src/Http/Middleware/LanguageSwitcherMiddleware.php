@@ -18,12 +18,12 @@ class LanguageSwitcherMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $key = 'backpack.language-switcher.locale';
+        $key = 'hncore.language-switcher.locale';
 
         if (Session::has($key)) {
             App::setLocale(Session::get($key));
         } else {
-            $availableLocales = array_keys(config('backpack.crud.locales'));
+            $availableLocales = array_keys(config('hncore.crud.locales'));
             $userLocales = preg_split('/,|;/', $request->server('HTTP_ACCEPT_LANGUAGE'));
 
             foreach ($userLocales as $locale) {

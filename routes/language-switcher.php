@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\Route;
 | handled by the Backpack\LanguageSwitcher package.
 |
 */
-if(config('backpack.language-switcher.setup_routes', true)) {
+if(config('hncore.language-switcher.setup_routes', true)) {
     Route::group([
         'middleware' => ['web', 'throttle:60,1'],
     ], function () {
         // set locale
-        Route::any('{backpack_prefix?}/{setLocale}/{locale?}', [\Backpack\LanguageSwitcher\Http\Controllers\LanguageSwitcherController::class, 'setLocale'])
+        Route::any('{hncore_prefix?}/{setLocale}/{locale?}', [\Backpack\LanguageSwitcher\Http\Controllers\LanguageSwitcherController::class, 'setLocale'])
             ->name('language-switcher.locale')
-            ->whereIn('setLocale', array_merge(['set-locale'],array_keys(config('backpack.crud.locales'))))
-            ->whereIn('backpack_prefix', ['set-locale', config('backpack.base.route_prefix')]);
+            ->whereIn('setLocale', array_merge(['set-locale'],array_keys(config('hncore.crud.locales'))))
+            ->whereIn('hncore_prefix', ['set-locale', config('hncore.base.route_prefix')]);
     });
 }
 

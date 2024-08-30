@@ -8,7 +8,7 @@ class LanguageSwitcherServiceProvider extends ServiceProvider
 {
     use AutomaticServiceProvider;
 
-    protected $vendorName = 'backpack';
+    protected $vendorName = 'hncore';
     protected $packageName = 'language-switcher';
     protected $commands = [];
 }

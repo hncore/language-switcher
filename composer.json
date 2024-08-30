@@ -10,11 +10,11 @@
         },
         {
             "name": "Cristian Tabacitu",
-            "email": "cristian.tabacitu@backpackforlaravel.com",
-            "homepage": "https://backpackforlaravel.com"
+            "email": "cristian.tabacitu@hncoreforlaravel.com",
+            "homepage": "https://hncoreforlaravel.com"
         }
     ],
-    "homepage": "https://github.com/backpack/language-switcher",
+    "homepage": "https://github.com/hncore/language-switcher",
     "keywords": [
         "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "Language", "Locale"
     ],

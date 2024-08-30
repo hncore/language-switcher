@@ -16,11 +16,11 @@ class LanguageSwitcherHelper
     }
 
     /**
-     * Get a locale name from config/backpack/crud.php
+     * Get a locale name from config/hncore/crud.php
      */
     public function getLocaleName(string $locale): ?string
     {
-        return config("backpack.crud.locales.$locale");
+        return config("hncore.crud.locales.$locale");
     }
 
     /**

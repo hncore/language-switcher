@@ -15,13 +15,13 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-right dropdown-menu-end" style="right: 0">
         @php
-            $useAdminPrefix = config('backpack.language-switcher.use_backpack_route_prefix');
+            $useAdminPrefix = config('hncore.language-switcher.use_hncore_route_prefix');
         @endphp
-        @foreach(config('backpack.crud.locales', []) as $locale => $name)
+        @foreach(config('hncore.crud.locales', []) as $locale => $name)
         <li>
             <a class="dropdown-item {{ $locale === $helper->getCurrentLocale() ? 'active disabled' : '' }}" href="{{ route('language-switcher.locale', [
                     'locale' => $useAdminPrefix ? $locale : null, 
-                    'backpack_prefix' => $useAdminPrefix ? config('backpack.base.route_prefix') : 'set-locale',
+                    'hncore_prefix' => $useAdminPrefix ? config('hncore.base.route_prefix') : 'set-locale',
                     'setLocale' => $useAdminPrefix ? 'set-locale' : $locale
                 ])}}">
                 @if($flags ?? true)
